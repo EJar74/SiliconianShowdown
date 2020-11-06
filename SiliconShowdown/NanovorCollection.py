@@ -1,6 +1,6 @@
-from NanovorClass import Nanovor
-from AttackClass import Attack
-from PlayerClass import Player
+from Nanovor import Nanovor
+from Attack import Attack
+from Player import Player
 
 #Nanovor: (self, name, health, armor, speed, strength,  sv, family_class, attacks:list)
 #Attacks: (self, name, cost:int, description, damage=[False], hack=[False], override=[False], combo=[False], consumes=False, armorpiercing=False)
@@ -613,48 +613,6 @@ war_charger2 = Nanovor("War Charger 2.0", 120, 10, 65, 115, 260, "Hexite", [poun
 psi_shard1 = Nanovor("Psi Shard 1.0", 135, 5, 40, 110, 265, "Hexite", [psi_drain, breakthrough, driller])
 
 shock_triton1 = Nanovor("Shock Triton 1.0", 135, 0, 45, 115, 300, "Hexite", [collider, whirlpool, triton_blast, shock_drain])
-
-# FIXED: Change the apply_hacks and apply_spike_combo functions to be split into 2 functions each.
-# One function for each will contain effects on self, the other will have effects on enemy
-# This way, if an attack is dodged, the effects to self (such as stun or SPD decrease) will still be applied
-# However, because the attack was dodged, the effect to the enemy is not applied. 
-
-# FIXED: the swap functionality, make it set the defenders next nanovor to their
-# current one if the swap effect is used, that way they won't be switched on
-# that same turn.
-
-#FIXED: THE DETERMINE ORDER FUNCTION!
-
-#Solid Strike mechanics look good
-#Mag Hunter mechanics look good
-#Battle Kraken 3.0 Poison Darts mechanics look good
-#Punchline mechanics look good
-#Additional armor-piercing base damage mechanics (Doom Mantis 2.0, Tank Walker 3.0) look good
-#Gutbuster mechanics look good 
-#Incinerate, Giga Siren 1.0 mechanics look good
-#Circuit Flyer 3.0 Short Circuit mechanics look good
-#Phase Spiker 1.0 Flying Fang mechanics look good
-#Doom Blade takes recoil if it attacks and its attack is dodged - looks good. 
-#Triton Manta 3.0 Shockback mechanics look good
-#Eraser Rumble Squid mechanics look good
-#PowerPlay ThunderCrab 2.0 mechanics look good
-#Shock Rumbler 1.0 Kickoff mechanics look good
-#Scarab Spear 1.0's Wise Up mechanics look good 
-#Spike Hornet 2.0's Wisecrack mechanics look good
-#War Thunderer Lightning mechanics look good
-#Psi Shard 1.0's Driller mechanics look good
-#Cyber Slicer 1.0's Random Jack mechanics look good
-#Shard Runner 1.0's Pummel mechanics look good
-# - Is there an attack that ignores armor, but then with a spike combo, does higher damage that doesn't ignore armor?
-#Shard Runner 2.0's Shard Shatter mechanics look good 
-#Hyper Blade 1.0's Hyper Slash mechanics look good
-# Battle Kraken 3.0's Hack Zap mechanics look good
-
-
-### Testing Area ###
-
-#NOTE: using copy.deepcopy to make a copy of the variable whenever a nanovor is used more than once in a match! 
-# That way, when damage is done to one nanovor, it does not affect all the nanovor that have the same name
 
 # CUSTOM NANOVOR
 omni_spike = Attack("Omni Spike", 2, "Places an Override that allows your swarm to make either a Red, Blue, or Yellow Spiked attack. ", override=[True, {"SPIKE":"Spike"}])
