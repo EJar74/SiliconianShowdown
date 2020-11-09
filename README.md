@@ -8,3 +8,7 @@ in real-world scenarios.
 To run the program, simply download the zipped file, and make sure to set your computer's permissions to allow the executable to be opened.
 From there, simply type in a screenname of your choosing, select any number of players, wait to find a match, and voila! You are now 
 inside of a match in the simulator, and can experiment with many different swarms and Nanovor.
+
+YOUTUBE DEMO:
+https://youtu.be/mPGhiMdALts
+
